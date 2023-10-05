@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Main server host for pathing
 urlpatterns = [
+    
+    # add path for web urls
     path('admin/', admin.site.urls),
-    path('', include('api.urls'))
+    path('api/', include('api.urls'))
 ]
